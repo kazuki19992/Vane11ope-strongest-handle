@@ -20,7 +20,7 @@ function vane11ope_maker(){
     output_html.innerHTML = vane11ope_one[getRandomInt(vane11ope_one.length - 1)];
     output_html.innerHTML += conjunction[getRandomInt(conjunction.length - 1)];
     output_html.innerHTML += vane11ope_two[getRandomInt(vane11ope_two.length - 1)] + ' ヴァネロピ';
-
+    reload_content();
 }
 
 function getRandomInt(max) {
