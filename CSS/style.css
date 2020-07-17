@@ -24,15 +24,18 @@ h1 {
     height: 300px;
 }
 
+.left-right-wrap {
+    display: grid;
+    grid-template-areas: "first second";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%;
+}
+
 .left {
-    width: 47.5%;
-    height: 100%;
+    grid-area: first;
 }
 .right{
-    float: left;
-    width: 47.5%;
-    height: 100%;
-    margin-left: 5%;
+    grid-area: second;
 }
 #result{
     display: flex;
@@ -101,4 +104,18 @@ h1 {
     color: #FFF;
     font-size: 20pt;
     background: linear-gradient(to bottom right, rgb(64, 180, 230), #0974c5);
+}
+
+
+@media screen and (max-width: 767px) {
+    .left-right-wrap:not(.force-split) { 
+        grid-template-areas: "first" "second";
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }   
+    
+    #result-maker-block {
+        height: auto;
+        grid-template-rows: 10em 1fr;
+    }
 }
