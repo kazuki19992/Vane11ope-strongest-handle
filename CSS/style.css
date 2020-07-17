@@ -1,0 +1,92 @@
+header{
+    text-align: center;
+}
+
+h1 {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #757575;
+    font-size: 10pt;
+}
+
+#container{
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#result-maker-block{
+    height: 300px;
+}
+
+.left {
+    width: 47.5%;
+    height: 100%;
+}
+.right{
+    float: left;
+    width: 47.5%;
+    height: 100%;
+    margin-left: 5%;
+}
+#result{
+    display: flex;
+    justify-content: center; /*左右中央揃え*/
+    align-items: center;     /*上下中央揃え*/
+    width: 100%;
+    height: 100%;
+    padding: 0.5em 1em;
+    border: double 5px #4ec4d3;
+}
+.maker-btn{
+    display: flex;
+    justify-content: center; /*左右中央揃え*/
+    align-items: center;     /*上下中央揃え*/
+    width: 100%;
+    height: 47.5%;
+    background: linear-gradient(to bottom right, rgb(230, 191, 64), #c57009);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn_icon {
+    font-size: 25pt;
+    font-weight: bold;
+}
+.btn_icon-share{
+    font-size: 25pt;
+}
+
+#vane11ope_share{
+    width: 100%;
+    height: 100%;
+}
+
+.share-btn-Twitter{
+    display: flex;
+    justify-content: center; /*左右中央揃え*/
+    align-items: center;     /*上下中央揃え*/
+    width: 100%;
+    height: 47.5%;
+    margin-top: 3%;
+    background: linear-gradient(to bottom right, rgb(64, 180, 230), #0974c5);
+    color: #fff;
+    text-decoration: none;
+}
+
+.share-btn-line{
+    display: flex;
+    justify-content: center; /*左右中央揃え*/
+    align-items: center;     /*上下中央揃え*/
+    width: 100%;
+    height: 47.5%;
+    margin-top: 3%;
+    background: linear-gradient(to bottom right, rgb(64, 230, 89), #05830b);
+    color: #fff;
+    text-decoration: none;
+}
