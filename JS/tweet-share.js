@@ -3,8 +3,8 @@ let area = document.getElementById('vane11ope_share');
 // シェア時に使用する値
 let url = location.href; // 現在のページURLを使用する場合 location.href;
 let shareTextContent = document.getElementById('result');
-let text = shareTextContent.innerHTML + '%0a#ぼくの考えた最強のヴァネロピ%0a';
-
+let text = shareTextContent.innerHTML;
+let tags = '#ぼくの考えた最強のヴァネロピ'
 // シェアボタンを生成する関数
 function generate_share_button() {
 
@@ -15,7 +15,7 @@ function generate_share_button() {
     liBtn.className = 'right line-btn';
 
     // 各シェアボタンのリンク先
-    let twHref = 'https://twitter.com/share?text='+encodeURIComponent(text)+'&url='+encodeURIComponent(url);
+    let twHref = 'https://twitter.com/share?text='+encodeURIComponent(text)+'%0a'+encodeURIComponent(tags)+'%0a'+'&url='+encodeURIComponent(url);
     let liHref = 'https://line.me/R/msg/text/?'+encodeURIComponent(text)+' '+encodeURIComponent(url);
 
     // シェアボタンにリンクを追加
@@ -46,7 +46,7 @@ function generate_share_button() {
 
 function reload_content(){
     shareTextContent = document.getElementById('result');
-    text = shareTextContent.innerHTML + '%0a#ぼくの考えた最強のヴァネロピ%0a';
+    text = shareTextContent.innerHTML;
 
     let element = document.getElementById("vane11ope_share");
     while (element.firstChild) {
