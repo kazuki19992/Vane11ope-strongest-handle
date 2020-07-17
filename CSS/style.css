@@ -90,3 +90,15 @@ h1 {
     color: #fff;
     text-decoration: none;
 }
+
+.vane11ope_btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /*左右中央揃え*/
+    align-items: center;     /*上下中央揃え*/
+    height: 100px;
+    margin-top: 3%;
+    color: #FFF;
+    font-size: 20pt;
+    background: linear-gradient(to bottom right, rgb(64, 180, 230), #0974c5);
+}
