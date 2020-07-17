@@ -46,7 +46,7 @@ function generate_share_button() {
 
 function reload_content(){
     shareTextContent = document.getElementById('result');
-    text = shareTextContent.innerHTML + '#ぼくの考えた最強のヴァネロピ';
+    text = shareTextContent.innerHTML + ' #ぼくの考えた最強のヴァネロピ';
 
     let element = document.getElementById("vane11ope_share");
     while (element.firstChild) {
