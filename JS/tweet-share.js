@@ -3,13 +3,13 @@ let snsArea = document.getElementById('vane11ope_share');
 
 // シェア時に使用する値
 let shareUrl = location.href; // 現在のページURLを使用する場合 location.href;
-let shareTextContent = document.getElementById('result');
-let shareText = shareTextContent.innerHTML + '#ぼくの考えた最強のヴァネロピ'; // 現在のページタイトルを使用する場合 document.title;
 
 generate_share_button(snsArea, shareUrl, shareText);
 
 // シェアボタンを生成する関数
 function generate_share_button(area, url, text) {
+    let shareTextContent = document.getElementById('result');
+    let shareText = shareTextContent.innerHTML + '#ぼくの考えた最強のヴァネロピ';
     // シェアボタンの作成
     let twBtn = document.createElement('div');
     twBtn.className = 'left twitter-btn';
