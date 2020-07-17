@@ -4,7 +4,6 @@ let area = document.getElementById('vane11ope_share');
 let url = location.href; // 現在のページURLを使用する場合 location.href;
 let shareTextContent = document.getElementById('result');
 let text = shareTextContent.innerHTML + '#ぼくの考えた最強のヴァネロピ';
-let isBtn = false;
 
 // シェアボタンを生成する関数
 function generate_share_button() {
@@ -15,11 +14,6 @@ function generate_share_button() {
     let liBtn = document.createElement('div');
     liBtn.className = 'right line-btn';
 
-    // 存在するか判定
-    if(isBtn){
-        area.removeChild(twBtn);
-        area.removeChild(liBtn);
-    }
     // 各シェアボタンのリンク先
     let twHref = 'https://twitter.com/share?text='+encodeURIComponent(text)+'&url='+encodeURIComponent(url);
     let liHref = 'https://line.me/R/msg/text/?'+encodeURIComponent(text)+' '+encodeURIComponent(url);
@@ -48,13 +42,16 @@ function generate_share_button() {
     // シェアボタンを表示
     area.appendChild(twBtn);
     area.appendChild(liBtn);
-    isBtn = true;
 }
 
 function reload_content(){
     shareTextContent = document.getElementById('result');
     text = shareTextContent.innerHTML + '#ぼくの考えた最強のヴァネロピ';
-    console.log(text);
+
+    let element = document.getElementById("vane11ope_share");
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
     generate_share_button();
 }
 
