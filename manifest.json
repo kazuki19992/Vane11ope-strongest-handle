@@ -1,0 +1,17 @@
+{
+    "name":"最強ヴァネロピ",
+    "short_name":"(๑•ૅㅁ•๑)",
+    "icons": [{
+        "src": "IMG/icons/icon-192x192.png",
+        "sizes":"192x192",
+        "type": "image/png"
+    }, {
+        "src": "IMG/icons/icon-512x512.png",
+        "sizes":"512x512",
+        "type": "image/png"
+    }],
+    "start_url": "/index.html?utm_source=homescreen",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFFFFF"
+}
