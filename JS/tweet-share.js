@@ -3,51 +3,43 @@ let area = document.getElementById('vane11ope_share');
 // シェア時に使用する値
 let url = location.href; // 現在のページURLを使用する場合 location.href;
 let shareTextContent = document.getElementById('result');
-let text = shareTextContent.innerHTML;
+let text = shareTextContent.innerText;
 let tags = '#ぼくの考えた最強のヴァネロピ'
 // シェアボタンを生成する関数
 function generate_share_button() {
-
-    // シェアボタンの作成
-    let twBtn = document.createElement('div');
-    twBtn.className = 'left twitter-btn';
-    let liBtn = document.createElement('div');
-    liBtn.className = 'right line-btn';
 
     // 各シェアボタンのリンク先
     let twHref = 'https://twitter.com/share?text='+encodeURIComponent(text)+'%0a'+encodeURIComponent(tags)+'%0a'+'&url='+encodeURIComponent(url);
     let liHref = 'https://line.me/R/msg/text/?'+encodeURIComponent(text)+' '+encodeURIComponent(url);
 
     // シェアボタンにリンクを追加
-    let twBtnContent = '<div class="share-btn-Twitter waves-effect waves-light">';
-    twBtnContent += '       <div>';
-    twBtnContent += '           <span class="btn_icon-share"><i class="fab fa-twitter fa-fw fa-2x"></i></span><br>';
-    twBtnContent += '           Twitterでヴァネロピを自慢する！';
-    twBtnContent += '       </div>';
-    twBtnContent += '</div>';
+    let twBtnContent = `<div class="share-btn-Twitter waves-effect waves-light">
+                            <div>
+                                <span class="btn_icon-share"><i class="fab fa-twitter fa-fw fa-2x"></i></span><br>
+                                Twitterでヴァネロピを自慢する！
+                            </div>
+                        </div>`;
 
-    let liBtnContent = '<div  class="share-btn-line waves-effect waves-light">';
-    liBtnContent += '       <div>';
-    liBtnContent += '           <span class="btn_icon-share"><i class="fab fa-line fa-fw fa-2x"></i></span><br>';
-    liBtnContent += '           LINEでヴァネロピを自慢する！';
-    liBtnContent += '       </div>';
-    liBtnContent += '</div>';
+    let liBtnContent = `<div class="share-btn-line waves-effect waves-light">
+                            <div>
+                                <span class="btn_icon-share"><i class="fab fa-line fa-fw fa-2x"></i></span><br>
+                                LINEでヴァネロピを自慢する！
+                            </div>
+                        </div>`;
 
     let clickEv = 'onclick="popupWindow(this.href); return false;"';
     let twLink = '<a href="' + twHref + '" ' + clickEv + 'onclick="reload_content()">' + twBtnContent + '</a>';
     let liLink = '<a href="' + liHref + '" target="_blank" onclick="reload_content()">' + liBtnContent + '</a>';
-    twBtn.innerHTML = twLink;
-    liBtn.innerHTML = liLink;
 
-    // シェアボタンを表示
-    area.appendChild(twBtn);
-    area.appendChild(liBtn);
+    // シェアボタンを挿入
+    area.insertAdjacentHTML(
+        'afterbegin',
+        '<div class="left twitter-btn">' + twLink + '</div>'
+        + '<div class="right line-btn">' + liLink + '</div>'
+    );
 }
 
 function reload_content(){
-    shareTextContent = document.getElementById('result');
-    text = shareTextContent.innerHTML;
-
     let element = document.getElementById("vane11ope_share");
     while (element.firstChild) {
         element.removeChild(element.firstChild);

@@ -17,9 +17,11 @@ let vane11ope_two = ['帝王', '王様', '覇者', '犬', '神', 'プロ', '王'
 function vane11ope_maker(){
     let output_html = document.getElementById('result');
 
-    output_html.innerHTML = vane11ope_one[getRandomInt(vane11ope_one.length - 1)];
-    output_html.innerHTML += conjunction[getRandomInt(conjunction.length - 1)];
-    output_html.innerHTML += vane11ope_two[getRandomInt(vane11ope_two.length - 1)] + ' ヴァネロピ';
+    text = vane11ope_one[getRandomInt(vane11ope_one.length - 1)]
+               + conjunction[getRandomInt(conjunction.length - 1)]
+               + vane11ope_two[getRandomInt(vane11ope_two.length - 1)]
+               + ' ヴァネロピ';
+    output_html.innerText = text;
     reload_content();
 }
 
