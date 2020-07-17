@@ -3,7 +3,7 @@ let area = document.getElementById('vane11ope_share');
 // シェア時に使用する値
 let url = location.href; // 現在のページURLを使用する場合 location.href;
 let shareTextContent = document.getElementById('result');
-let text = shareTextContent.innerHTML + '#ぼくの考えた最強のヴァネロピ';
+let text = shareTextContent.innerHTML + ' #ぼくの考えた最強のヴァネロピ';
 
 // シェアボタンを生成する関数
 function generate_share_button() {
