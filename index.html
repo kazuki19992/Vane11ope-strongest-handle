@@ -37,7 +37,7 @@
     </script>
 
 </head>
-<body onload="generate_share_button()">
+<body>
     <header>
         <h1>(๑•ૅㅁ•๑)</h1>
         <p class="subtitle">最強のヴァネロピをつくりだそう！！</p>
@@ -48,7 +48,7 @@
                 <div id="result">最強のヴァネロピをつくろう！</div>
             </div>
             <div class="right">
-                <a onclick="vane11ope_maker()" id="vane11ope_maker_trigger">
+                <a id="vane11ope_maker_trigger">
                     <div class="maker-btn waves-effect waves-light">
                         <div>
                             <span class="btn_icon">(๑•ૅㅁ•๑)</span><br>
@@ -56,7 +56,28 @@
                         </div>
                     </div>
                 </a>
-                <div class="left-right-wrap force-split" id="vane11ope_share"></div>
+                <div class="left-right-wrap force-split" id="vane11ope_share">
+                    <div class="left twitter-btn">
+                        <a id="vane11ope_share_twitter" href="" onclick="popupWindow(this.href); return false;">
+                            <div class="share-btn-Twitter waves-effect waves-light">
+                                <div>
+                                    <span class="btn_icon-share"><i class="fab fa-twitter fa-fw fa-2x"></i></span><br>
+                                    Twitterでヴァネロピを自慢する！
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="right line-btn">
+                        <a id="vane11ope_share_line" href="" target="_blank" onclick="reload_content()">
+                            <div class="share-btn-line waves-effect waves-light">
+                                <div>
+                                    <span class="btn_icon-share"><i class="fab fa-line fa-fw fa-2x"></i></span><br>
+                                    LINEでヴァネロピを自慢する！
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="left-right-wrap">
