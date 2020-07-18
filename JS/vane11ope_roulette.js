@@ -11,11 +11,14 @@ const vane11ope_one = ['最強', '闇', '光', '混沌', '夜', '無職', '太�
                        'radare', 'ヴァネロピ', '破壊王', '全て', 'この世', '宇宙', '男子トイレ', 'Twitter', 'ThinkPad', 'ヴァネロピﾁｬﾝ😅',
                        '藤井聡太', '将棋', 'いいこと😍', '属性', 'React', 'ポートフォリオ', '公園', '散歩', 'JS', '小学生', '中学生', '高校生',
                        '開成', '灘', '筑駒', 'ks', '日本', 'アメリカ', 'MS', 'マイクロソフト', 'WSL', 'Linux', 'Linus', 'UNIX', 'Mac', 'iPhone',
-                       'Huawei', 'ティム・クック', 'ビル・ゲイツ', 'ヴァ・ネロピ=サン(794~1192)', 'Windows', '英語', 'YouTube'
+                       'Huawei', 'ティム・クック', 'ビル・ゲイツ', 'ヴァ・ネロピ=サン(794~1192)', 'Windows', '英語', 'YouTube', '数学', '🔰', ''
                       ];
 const conjunction = ['の', 'は', 'を', 'が', 'と', 'に', '😅', ''];
 const vane11ope_two = ['帝王', '王様', '覇者', '犬', '神', 'プロ', '王', 'ちゅっ😘💓', 'キス💏', 'ツイキャス', '棋聖', 'にゃーん', ''];
+const vane11ope_face = ['(๑•ૅㅁ•๑)', '(๑•̥ૅㅁ•̥๑)', '♪(๑ᴖ◡ᴖ๑)♪', '(๑>◡<๑)', '٩(๑❛ᴗ❛๑)۶', '🔰']
 
+const vane11ope_face_btn = document.getElementById('btn_face');
+const vane11ope_face_title = document.getElementById('title')
 
 const vane11ope_maker = () => {
     const output_html = document.getElementById('result');
@@ -25,6 +28,11 @@ const vane11ope_maker = () => {
                + vane11ope_two[getRandomInt(vane11ope_two.length - 1)]
                + ' ヴァネロピ';
     output_html.innerText = text;
+
+    // ここでタイトルとボタンのヴァネ顔を変える！
+    vane11ope_face_title.innerHTML = vane11ope_face[getRandomInt(vane11ope_face.length)];
+    vane11ope_face_btn.innerHTML = vane11ope_face[getRandomInt(vane11ope_face.length)];
+    
     reload_content(text);
 };
 
